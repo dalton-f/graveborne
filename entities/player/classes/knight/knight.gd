@@ -27,8 +27,9 @@ func _unhandled_input(event):
 func _physics_process(delta):
 	# Apply gravity
 	if not grounded:
-		velocity.y -= gravity * delta
-
+		velocity.y -= gravity * delta		
+		
+	#region Jumping
 	# Handle jumping
 	if Input.is_action_just_pressed("jump") and grounded:
 		velocity.y = JUMP_VELOCITY
@@ -47,7 +48,9 @@ func _physics_process(delta):
 		animation_state.travel("Jump_Idle")
 		
 	last_floor = grounded
+	#endregion
 	
+	#region Movement and Acceleration
 	# Get the input direction and handle the movement/deceleration.
 	var vy = velocity.y
 	velocity.y = 0
@@ -68,6 +71,7 @@ func _physics_process(delta):
 	# Rotate the player model to follow the spring arm direction
 	if velocity.length() > 1.0:
 		model.rotation.y = lerp_angle(model.rotation.y, spring_arm.rotation.y, ROTATION_SPEED * delta)
+	#endregion
 	
 	move_and_slide()
 	
