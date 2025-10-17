@@ -25,8 +25,6 @@ func _unhandled_input(event):
 		spring_arm.rotation.y -= event.relative.x * MOUSE_SENSITIVITY
 
 func _physics_process(delta):
-	grounded = is_on_floor()
-	
 	# Apply gravity
 	if not grounded:
 		velocity.y -= gravity * delta
@@ -72,3 +70,5 @@ func _physics_process(delta):
 		model.rotation.y = lerp_angle(model.rotation.y, spring_arm.rotation.y, ROTATION_SPEED * delta)
 	
 	move_and_slide()
+	
+	grounded = is_on_floor()
