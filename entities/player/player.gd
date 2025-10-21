@@ -34,6 +34,7 @@ func _unhandled_input(event):
 		spring_arm.rotation_degrees.x = clamp(spring_arm.rotation_degrees.x, -90.0, 30.0)
 		spring_arm.rotation.y -= event.relative.x * mouse_sensitivity
 
+#region Player Movement
 func _physics_process(delta):
 	# Handle gravity
 	if not is_on_floor():
@@ -79,3 +80,4 @@ func _physics_process(delta):
 		model.rotation.y = lerp_angle(model.rotation.y, spring_arm.rotation.y, rotation_speed * delta)
 
 	move_and_slide()
+#endregion
