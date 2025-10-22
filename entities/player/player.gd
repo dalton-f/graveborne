@@ -24,14 +24,18 @@ var last_floor = true
 @onready var animation_tree = $AnimationTree
 @onready var animation_state = $AnimationTree.get("parameters/playback")
 @onready var finite_state_manager: FiniteStateManager = $Managers/FiniteStateManager
+@onready var class_manager: ClassManager = $Managers/ClassManager
 @onready var state_label: Label = $CanvasLayer/MarginContainer/StateLabel
+@onready var class_label: Label = $CanvasLayer/MarginContainer/ClassLabel
 
 func _ready() -> void:
 	# Hide the cursor and lock it to the center of the screen but ensure it can still be captured
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	finite_state_manager.connect("state_changed", _on_state_changed)
+	class_manager.connect("class_changed", _on_class_changed)
 	state_label.text = finite_state_manager.initial_state.name
+	class_label.text = class_manager.initial_class.name
 	
 	move_and_slide()
 	
@@ -76,3 +80,6 @@ func _physics_process(delta):
 
 func _on_state_changed(new_state_name):
 	state_label.text = new_state_name
+
+func _on_class_changed(new_class_name):
+	class_label.text = new_class_name
