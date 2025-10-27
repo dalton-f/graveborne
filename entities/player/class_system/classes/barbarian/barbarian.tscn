@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=4 uid="uid://b3g0hdsa6aqrc"]
 
-[ext_resource type="Texture2D" uid="uid://b7s5xa7ksimmj" path="res://entities/player/classes/barbarian/barbarian_texture.png" id="1_4tdpj"]
+[ext_resource type="Texture2D" uid="uid://b7s5xa7ksimmj" path="res://entities/player/class_system/classes/barbarian/barbarian_texture.png" id="1_4tdpj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uj13i"]
 resource_name = "barbarian_texture"

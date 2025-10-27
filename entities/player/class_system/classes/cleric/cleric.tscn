@@ -1,8 +1,6 @@
-[gd_scene load_steps=14 format=4 uid="uid://dl5lks1fsjmhd"]
+[gd_scene load_steps=12 format=4 uid="uid://dl5lks1fsjmhd"]
 
-[ext_resource type="Texture2D" uid="uid://vuhkvnetfy1k" path="res://entities/player/classes/cleric/cleric_texture.png" id="1_n6y3g"]
-[ext_resource type="PackedScene" uid="uid://jate8gfa4g71" path="res://entities/player/classes/cleric/cleric_shield.gltf" id="1_p06lm"]
-[ext_resource type="PackedScene" uid="uid://eiwo7lubawc5" path="res://entities/player/classes/cleric/cleric_mace.gltf" id="2_uladx"]
+[ext_resource type="Texture2D" uid="uid://vuhkvnetfy1k" path="res://entities/player/class_system/classes/cleric/cleric_texture.png" id="1_n6y3g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o4b84"]
 resource_name = "cleric"
@@ -592,15 +590,10 @@ transform = Transform3D(-0.99999887, -3.9761176e-07, -3.6790345e-07, -4.658428e-
 bone_name = "handslot.l"
 bone_idx = 8
 
-[node name="cleric_shield" parent="handslot_l" instance=ExtResource("1_p06lm")]
-transform = Transform3D(1, 0, -7.9700556e-14, 0, 1, 0, -9.2553826e-14, -1.7053026e-13, 1, -1.7881393e-07, -1.2562714e-07, 0.20150363)
-
 [node name="handslot_r" type="BoneAttachment3D" parent="."]
 transform = Transform3D(-0.999999, 4.6839318e-07, 4.573103e-07, 3.9779994e-07, -5.8875344e-07, 0.99999946, 3.9761645e-07, 0.99999946, 5.358822e-07, -0.8831323, 1.0492611, -7.275953e-07)
 bone_name = "handslot.r"
 bone_idx = 13
-
-[node name="cleric_mace" parent="handslot_r" instance=ExtResource("2_uladx")]
 
 [node name="Cleric_ArmLeft" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_j6ttt")

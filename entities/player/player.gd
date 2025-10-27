@@ -23,6 +23,7 @@ var last_floor = true
 @onready var model = $Rig
 @onready var animation_tree = $AnimationTree
 @onready var animation_state = $AnimationTree.get("parameters/playback")
+
 @onready var finite_state_manager: FiniteStateManager = $Managers/FiniteStateManager
 @onready var class_manager: ClassManager = $Managers/ClassManager
 @onready var state_label: Label = $CanvasLayer/MarginContainer/StateLabel

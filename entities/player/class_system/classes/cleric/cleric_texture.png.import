@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vuhkvnetfy1k"
-path.s3tc="res://.godot/imported/cleric_texture.png-05f29c3239a0c636910a2cbee07b8b07.s3tc.ctex"
+path.s3tc="res://.godot/imported/cleric_texture.png-b65db30e709bdf96b6611a1cd83bfd83.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://entities/player/classes/cleric/cleric_texture.png"
-dest_files=["res://.godot/imported/cleric_texture.png-05f29c3239a0c636910a2cbee07b8b07.s3tc.ctex"]
+source_file="res://entities/player/class_system/classes/cleric/cleric_texture.png"
+dest_files=["res://.godot/imported/cleric_texture.png-b65db30e709bdf96b6611a1cd83bfd83.s3tc.ctex"]
 
 [params]
 

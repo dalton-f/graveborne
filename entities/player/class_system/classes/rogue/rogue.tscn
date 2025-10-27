@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=4 uid="uid://ii8q4aahhy8o"]
 
-[ext_resource type="Texture2D" uid="uid://7stuhinapne1" path="res://entities/player/classes/rogue/rogue_texture.png" id="1_xp1kt"]
+[ext_resource type="Texture2D" uid="uid://7stuhinapne1" path="res://entities/player/class_system/classes/rogue/rogue_texture.png" id="1_xp1kt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i8twv"]
 resource_name = "rogue_texture"

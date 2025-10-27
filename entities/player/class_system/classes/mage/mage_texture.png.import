@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7gq833j0f738"
-path.s3tc="res://.godot/imported/mage_texture.png-75c188667517baee85953060fbd640aa.s3tc.ctex"
+path.s3tc="res://.godot/imported/mage_texture.png-d7c4f378e0638b23a2d18939f750e130.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://entities/player/classes/mage/mage_texture.png"
-dest_files=["res://.godot/imported/mage_texture.png-75c188667517baee85953060fbd640aa.s3tc.ctex"]
+source_file="res://entities/player/class_system/classes/mage/mage_texture.png"
+dest_files=["res://.godot/imported/mage_texture.png-d7c4f378e0638b23a2d18939f750e130.s3tc.ctex"]
 
 [params]
 

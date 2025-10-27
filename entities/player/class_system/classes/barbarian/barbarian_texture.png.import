@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3yc81fw67oxp"
-path.s3tc="res://.godot/imported/knight_texture.png-afd5789f788f44d608df0bbbd1d18c8a.s3tc.ctex"
+uid="uid://b7s5xa7ksimmj"
+path.s3tc="res://.godot/imported/barbarian_texture.png-5b418478cb20ac4f9114fbbb6492075e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "af4707185c3e9844f7ed166c1a2e24f8"
+"md5": "267533c91145eeae53d251a78b53814c"
 }
 
 [deps]
 
-source_file="res://entities/player/classes/knight/knight_texture.png"
-dest_files=["res://.godot/imported/knight_texture.png-afd5789f788f44d608df0bbbd1d18c8a.s3tc.ctex"]
+source_file="res://entities/player/class_system/classes/barbarian/barbarian_texture.png"
+dest_files=["res://.godot/imported/barbarian_texture.png-5b418478cb20ac4f9114fbbb6492075e.s3tc.ctex"]
 
 [params]
 
