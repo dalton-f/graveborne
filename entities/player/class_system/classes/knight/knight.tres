@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Class" load_steps=3 format=3 uid="uid://berr2uxgveqbm"]
+[gd_resource type="Resource" script_class="Class" load_steps=3 format=3 uid="uid://dk1wdg1thsrrr"]
 
-[ext_resource type="Script" uid="uid://clcdbl4dfm6tl" path="res://entities/player/class_system/class_manager/class.gd" id="1_hjgjj"]
-[ext_resource type="PackedScene" uid="uid://cm1aojfo0kuax" path="res://entities/player/class_system/classes/knight/knight.tscn" id="1_qx6rv"]
+[ext_resource type="PackedScene" uid="uid://di15neyr3j88s" path="res://entities/player/class_system/classes/knight/knight.tscn" id="1_8ml51"]
+[ext_resource type="Script" uid="uid://clcdbl4dfm6tl" path="res://entities/player/class_system/class_manager/class.gd" id="1_a5vc0"]
 
 [resource]
-script = ExtResource("1_hjgjj")
+script = ExtResource("1_a5vc0")
 name = "Knight"
-model_scene = ExtResource("1_qx6rv")
+model_scene = ExtResource("1_8ml51")
 metadata/_custom_type_script = "uid://clcdbl4dfm6tl"

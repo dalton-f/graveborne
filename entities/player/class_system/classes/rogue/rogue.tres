@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="Class" load_steps=3 format=3 uid="uid://b6ph5vhgcgr3c"]
+[gd_resource type="Resource" script_class="Class" load_steps=3 format=3 uid="uid://dagx0rw2sssc7"]
 
 [ext_resource type="Script" uid="uid://clcdbl4dfm6tl" path="res://entities/player/class_system/class_manager/class.gd" id="1_b1pa1"]
-[ext_resource type="PackedScene" uid="uid://ii8q4aahhy8o" path="res://entities/player/class_system/classes/rogue/rogue.tscn" id="1_qppq8"]
+[ext_resource type="PackedScene" uid="uid://dqtqrulav37ae" path="res://entities/player/class_system/classes/rogue/rogue.tscn" id="1_qppq8"]
 
 [resource]
 script = ExtResource("1_b1pa1")

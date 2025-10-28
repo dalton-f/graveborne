@@ -20,7 +20,7 @@ var last_floor = true
 
 @onready var spring_arm = $CameraMount
 @onready var camera = $CameraMount/Camera
-@onready var model = $Rig
+@onready var model = $Rig_Medium
 @onready var animation_tree = $AnimationTree
 @onready var animation_state = $AnimationTree.get("parameters/playback")
 

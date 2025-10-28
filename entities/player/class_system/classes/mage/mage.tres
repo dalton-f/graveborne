@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Class" load_steps=3 format=3 uid="uid://cr1vltihqr015"]
+[gd_resource type="Resource" script_class="Class" load_steps=3 format=3 uid="uid://dxsp4eskdfvf3"]
 
-[ext_resource type="PackedScene" uid="uid://bl84o4nnjohi0" path="res://entities/player/class_system/classes/mage/mage.tscn" id="1_76kr0"]
-[ext_resource type="Script" uid="uid://clcdbl4dfm6tl" path="res://entities/player/class_system/class_manager/class.gd" id="1_j7cvw"]
+[ext_resource type="Script" uid="uid://clcdbl4dfm6tl" path="res://entities/player/class_system/class_manager/class.gd" id="1_88bjv"]
+[ext_resource type="PackedScene" uid="uid://blot5jalj77x0" path="res://entities/player/class_system/classes/mage/mage.tscn" id="1_o6eve"]
 
 [resource]
-script = ExtResource("1_j7cvw")
+script = ExtResource("1_88bjv")
 name = "Mage"
-model_scene = ExtResource("1_76kr0")
+model_scene = ExtResource("1_o6eve")
 metadata/_custom_type_script = "uid://clcdbl4dfm6tl"

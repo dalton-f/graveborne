@@ -4,20 +4,35 @@ class_name ClassManager
 signal class_changed(new_class_name: String)
 
 @export var initial_class : Class
+@export var all_classes: Array[Class] = []
 
 var current_class : Class
 var player
+var current_index: int = 0
 
 # Class resources will always follow the naming convention bodypart_mesh for each mesh part
 # This means that we can store all expected mesh parts in an array and loop through them
 # The corresponding MeshInstance on the player will also match these names
-var mesh_parts = ["Head", "ArmLeft", "ArmRight", "Body", "LegLeft", "LegRight", "HeadAccessory", "ChestAccessory"]
+var mesh_parts = ["Head", "ArmLeft", "ArmRight", "Body", "LegLeft", "LegRight"]
 
 func _ready() -> void:
 	player = owner
 	
 	if initial_class:
 		_change_class(initial_class)
+
+# Temporary code to test swapping classes with animations
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("change_class"):
+		_cycle_class()
+
+func _cycle_class() -> void:
+	if all_classes.size() == 0:
+		return
+	
+	current_index = (current_index + 1) % all_classes.size()
+	_change_class(all_classes[current_index])
+
 
 #region Class Management
 func _change_class(new_class):
@@ -33,13 +48,43 @@ func _change_class(new_class):
 func _update_player_meshes():
 	current_class._update_meshes()
 
-	var rig = player.get_node("Rig")
+	var rig = player.get_node("Rig_Medium")
 	var skeleton = rig.get_node("Skeleton3D")
 	
-	# Using the class resource, replace all the mesh parts on the player rig
+	# Clear any previous class meshes
+	for child in skeleton.get_children():
+		if child is MeshInstance3D:
+			child.queue_free()
+	
+	# Using the class resource, add all new mesh instances as children on the player rig
 	for part in mesh_parts:
 		var prop_name = part.to_snake_case() + "_mesh"
-		_set_mesh_if_exists(skeleton, part, current_class.get(prop_name))
+		_create_mesh_node(skeleton, part, current_class.get(prop_name))
+	
+	_update_accessories(skeleton)
+
+func _update_accessories(skeleton: Node):
+	if not current_class.accessories:
+		return
+
+	# Loop through the class accesory data
+	for accessory_name in current_class.accessories.keys():
+		var accessory_data = current_class.accessories[accessory_name]
+		var mesh = accessory_data.get("mesh")
+		
+		if not mesh:
+			continue
+	
+		# TODO: find a way to use _create_mesh_node for this to
+		# Dynamically add new meshes under the player skeleton for any accessory
+		var node = mesh.duplicate()
+		node.name = accessory_name.capitalize()
+		skeleton.add_child(node)
+
+		# Ensure that the position and rotation is correct
+		node.position = accessory_data.position
+		node.rotation = accessory_data.rotation
+#endregion
 
 func _refresh_animation_tree():
 	var anim_player = player.get_node("AnimationPlayer")
@@ -48,31 +93,12 @@ func _refresh_animation_tree():
 	anim_tree.active = false
 	anim_tree.set_animation_player(anim_player.get_path())
 	anim_tree.active = true
-#endregion
 
-func _set_mesh_if_exists(root: Node, node_name: String, mesh: Mesh) -> void:	
-	var node = _find_node_recursive(root, node_name)
-	
+func _create_mesh_node(root: Node, node_name: String, mesh: MeshInstance3D) -> void:
 	if not mesh:
-		node.mesh = null
+		return
 	
-	if node and node is MeshInstance3D:
-		node.mesh = mesh
-	
-	# Head accessories sometimes have a custom position, so we can update this if an accessory exists
-	# Any chest accessory seems to have the same unchanged position, so the check isn't needed for those
-	if node and node_name == "HeadAccessory":
-		node.position = current_class.head_accessory_position
-		node.rotation = current_class.head_accessory_rotation
+	var node = mesh.duplicate()
+	node.name = node_name
 
-func _find_node_recursive(node: Node, search_name: String) -> Node:
-	if node.name.to_lower() == search_name.to_lower():
-		return node
-	
-	for child in node.get_children():
-		var found = _find_node_recursive(child, search_name)
-		
-		if found:
-			return found
-	
-	return null
+	root.add_child(node)

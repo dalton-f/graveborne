@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Class" load_steps=3 format=3 uid="uid://dffmdrjkes6o5"]
+
+[ext_resource type="Script" uid="uid://clcdbl4dfm6tl" path="res://entities/player/class_system/class_manager/class.gd" id="1_tqqkm"]
+[ext_resource type="PackedScene" uid="uid://d0g3hwc3q4n6q" path="res://entities/player/class_system/classes/ranger/ranger.tscn" id="1_wuw14"]
+
+[resource]
+script = ExtResource("1_tqqkm")
+name = "Ranger"
+model_scene = ExtResource("1_wuw14")
+metadata/_custom_type_script = "uid://clcdbl4dfm6tl"

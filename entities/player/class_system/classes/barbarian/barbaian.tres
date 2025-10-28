@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Class" load_steps=3 format=3 uid="uid://ba8ts6yiiladb"]
+
+[ext_resource type="Script" uid="uid://clcdbl4dfm6tl" path="res://entities/player/class_system/class_manager/class.gd" id="1_ceqh2"]
+[ext_resource type="PackedScene" uid="uid://bhqnok48r2jq1" path="res://entities/player/class_system/classes/barbarian/barbarian.tscn" id="1_ycsqc"]
+
+[resource]
+script = ExtResource("1_ceqh2")
+name = "Barbarian"
+model_scene = ExtResource("1_ycsqc")
+metadata/_custom_type_script = "uid://clcdbl4dfm6tl"
