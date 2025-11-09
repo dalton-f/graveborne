@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dh84m3f3i3bg5"]
+
+[ext_resource type="Script" uid="uid://dm0tyc3l85gjv" path="res://common/managers/finite_state_manager/finite_state_manager.gd" id="1_j5ajb"]
+
+[node name="FiniteStateManager" type="Node"]
+script = ExtResource("1_j5ajb")
