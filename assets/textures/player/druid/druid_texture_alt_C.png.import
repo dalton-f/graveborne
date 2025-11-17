@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2sf2poarj3vk"
-path.s3tc="res://.godot/imported/knight_texture_alt_B.png-fc134c351b0a706d0f08e8ce09a54d4c.s3tc.ctex"
+uid="uid://bnjfpmi2n8hw0"
+path.s3tc="res://.godot/imported/druid_texture_alt_C.png-fc25c4a4a04c70754141b2f02f5c9e6f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://entities/player/classes/knight/textures/knight_texture_alt_B.png"
-dest_files=["res://.godot/imported/knight_texture_alt_B.png-fc134c351b0a706d0f08e8ce09a54d4c.s3tc.ctex"]
+source_file="res://assets/textures/player/druid/druid_texture_alt_C.png"
+dest_files=["res://.godot/imported/druid_texture_alt_C.png-fc25c4a4a04c70754141b2f02f5c9e6f.s3tc.ctex"]
 
 [params]
 
