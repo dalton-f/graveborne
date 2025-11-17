@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Class" load_steps=3 format=3 uid="uid://bf62dtishlg7m"]
+
+[ext_resource type="PackedScene" uid="uid://bl84o4nnjohi0" path="res://entities/player/classes/mage/mage.tscn" id="1_76kr0"]
+[ext_resource type="Script" uid="uid://xo3pjgbemf7f" path="res://entities/player/class_manager/class.gd" id="1_j7cvw"]
+
+[resource]
+script = ExtResource("1_j7cvw")
+name = "Mage"
+scene = ExtResource("1_76kr0")
+metadata/_custom_type_script = "uid://xo3pjgbemf7f"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Class" load_steps=3 format=3 uid="uid://cxu6bu8n5oluw"]
+
+[ext_resource type="PackedScene" uid="uid://cvj4s7q5l6qit" path="res://entities/player/classes/druid/druid.tscn" id="1_6hkp7"]
+[ext_resource type="Script" uid="uid://xo3pjgbemf7f" path="res://entities/player/class_manager/class.gd" id="1_blgns"]
+
+[resource]
+script = ExtResource("1_blgns")
+name = "Druid"
+scene = ExtResource("1_6hkp7")
+metadata/_custom_type_script = "uid://xo3pjgbemf7f"

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Class" load_steps=2 format=3 uid="uid://crdr3u4nbubp2"]
+
+[ext_resource type="Script" uid="uid://xo3pjgbemf7f" path="res://entities/player/class_manager/class.gd" id="1_b1pa1"]
+
+[resource]
+script = ExtResource("1_b1pa1")
+name = "Rogue"
+metadata/_custom_type_script = "uid://xo3pjgbemf7f"

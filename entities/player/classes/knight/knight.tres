@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Class" load_steps=3 format=3 uid="uid://bd7awgnbuarcd"]
+
+[ext_resource type="Script" uid="uid://xo3pjgbemf7f" path="res://entities/player/class_manager/class.gd" id="1_hjgjj"]
+[ext_resource type="PackedScene" uid="uid://cm1aojfo0kuax" path="res://entities/player/classes/knight/knight.tscn" id="1_qx6rv"]
+
+[resource]
+script = ExtResource("1_hjgjj")
+name = "Knight"
+scene = ExtResource("1_qx6rv")
+metadata/_custom_type_script = "uid://xo3pjgbemf7f"
