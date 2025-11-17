@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cusoysq3w4wa"]
+
+[ext_resource type="Script" uid="uid://cx5fp7u6osqta" path="res://entities/player/class_manager/class_manager.gd" id="1_41wrl"]
+
+[node name="ClassManager" type="Node"]
+script = ExtResource("1_41wrl")
