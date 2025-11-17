@@ -18,6 +18,7 @@ func _ready():
 		initial_state.enter()
 		current_state = initial_state
 
+
 func _process(delta):
 	if current_state:
 		current_state.update(delta)
@@ -29,13 +30,14 @@ func _physics_process(delta: float) -> void:
 #region State Management
 func change_state(source_state : State, new_state_name : String):
 	if source_state != current_state:
-		print("Invalid change_state trying from: " + source_state.name + " but currently in: " + current_state.name)
+		push_warning("Invalid change_state trying from: " + source_state.name + " but currently in: " + current_state.name)
+
 		return
 	
 	var new_state = states.get(new_state_name.to_lower())
 	
 	if !new_state:
-		print("New state is empty")
+		push_warning("New state is empty")
 		return
 		
 	if current_state:
