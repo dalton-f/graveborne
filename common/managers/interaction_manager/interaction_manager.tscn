@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://1krq28mqfx0j"]
+
+[ext_resource type="Script" uid="uid://ssbh7pfi2ixb" path="res://common/managers/interaction_manager/interaction_manager.gd" id="1_qxov8"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_qxov8"]
+height = 0.001
+radius = 3.5
+
+[node name="InteractionManager" type="Area3D"]
+script = ExtResource("1_qxov8")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="InteractionPrompt" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 24
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22851563, 0)
+shape = SubResource("CylinderShape3D_qxov8")
+debug_color = Color(13.467058, 0, 0, 1)
